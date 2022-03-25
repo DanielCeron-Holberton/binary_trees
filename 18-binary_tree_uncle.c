@@ -1,15 +1,18 @@
 #include "binary_trees.h"
-
+/**
+ * binary_tree_sibling_2 - binary_tree_sibling_2
+ *
+ * @node: node
+ * Return: binary_tree_t*
+ */
 binary_tree_t *binary_tree_sibling_2(binary_tree_t *node)
 {
 	if (!node || !node->parent)
 		return (NULL);
-
 	if (node->parent->left == node)
 	{
 		if (!node->parent->right)
 			return (NULL);
-
 		return (node->parent->right);
 	}
 	else
@@ -20,7 +23,12 @@ binary_tree_t *binary_tree_sibling_2(binary_tree_t *node)
 	}
 	return (NULL);
 }
-
+/**
+ * binary_tree_uncle - binary_tree_uncle
+ *
+ * @node: node
+ * Return: binary_tree_t*
+ */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 	if (!node || !node->parent)
